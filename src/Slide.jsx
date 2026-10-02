@@ -1,9 +1,8 @@
-import { useEffect, useId, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import p5 from 'p5';
 
-export default function Slide({ title, author, sketch }) {
+export default function Slide({ label, items = [], sketch, overlayOpacity = 0.4 }) {
   const sketchContainer = useRef(null);
-  const titleId = useId();
 
   useEffect(() => {
     if (!sketch) return;
@@ -13,11 +12,18 @@ export default function Slide({ title, author, sketch }) {
   }, [sketch]);
 
   return (
-    <section className="slide" aria-labelledby={titleId}>
+    <section className="slide" aria-label={label}>
       <div className="slide__sketch" ref={sketchContainer} aria-hidden="true" />
-      <div className="slide__overlay" aria-hidden="true" />
-      <h1 className="slide__title" id={titleId}>{title}</h1>
-      {author && <p className="slide__author">{author}</p>}
+      <div className="slide__overlay" style={{ opacity: overlayOpacity }} aria-hidden="true" />
+      {items.map(({ id, gridArea, component, className, style }) => (
+        <div
+          key={id}
+          className={['slide__item', className].filter(Boolean).join(' ')}
+          style={{ ...style, gridArea }}
+        >
+          {component}
+        </div>
+      ))}
     </section>
   );
 }

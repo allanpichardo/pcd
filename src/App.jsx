@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import Slide from './Slide.jsx';
-import cppnSketch from './sketches/cppn.js';
+import title from './slides/title.jsx';
+import slide2 from './slides/slide-2.jsx';
+import slide3 from './slides/slide-3.jsx';
 
 const slides = [
-  {
-    id: 'title',
-    title: 'lorem ipsum',
-    author: 'Allan Pichardo',
-    sketch: cppnSketch,
-  },
+    title,
+    slide2,
+    slide3
 ];
 
 export default function App() {
