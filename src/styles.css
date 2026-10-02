@@ -129,3 +129,20 @@ body,
     width: 100%;
   }
 }
+
+.flower-generator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  > canvas {
+    display: block;
+    image-rendering: auto;
+  }
+
+  > canvas[hidden] {
+    display: none;
+  }
+}
