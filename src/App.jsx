@@ -3,11 +3,17 @@ import Slide from './Slide.jsx';
 import title from './slides/title.jsx';
 import slide2 from './slides/slide-2.jsx';
 import slide3 from './slides/slide-3.jsx';
+import slide4 from './slides/slide-4.jsx';
+import slide5 from "./slides/slide-5.jsx";
+import slide6 from "./slides/slide-6.jsx";
 
 const slides = [
     title,
     slide2,
-    slide3
+    slide3,
+    slide4,
+    slide5,
+    slide6
 ];
 
 export default function App() {

@@ -69,5 +69,12 @@ export default {
             style: {alignSelf: 'center'},
             component: <h2>[r,g,b]</h2>,
         },
+        {
+            id: 'attribution',
+            gridArea: '6 / 1 / 7 / 13',
+            className: 'right',
+            style: {alignSelf: 'end', fontSize: '0.5rem'},
+            component: <small><a href="https://commons.wikimedia.org/wiki/File:Neural_network.svg">Dake, Mysid</a>, <a href="https://creativecommons.org/licenses/by/1.0">CC BY 1.0</a>, via Wikimedia Commons</small>,
+        },
     ],
 }

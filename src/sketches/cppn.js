@@ -1,5 +1,6 @@
 // The supplied sketch in p5 instance mode. Each slide owns its network.
 export default function cppnSketch(p) {
+  const RESET_TIMER = 5 * 1000;
   const NUM_LAYERS = 2;
   const NUM_NODES = 2;
   const hiddenWeights = [];
@@ -8,10 +9,7 @@ export default function cppnSketch(p) {
   const outputWeightsB = [];
   const activations = [Math.sin];
 
-  p.setup = () => {
-    p.createCanvas(100, 100);
-    p.pixelDensity(1);
-
+  function initializeNetwork() {
     for (let layer = 0; layer < NUM_LAYERS; layer++) {
       hiddenWeights[layer] = [];
       const numInputs = layer === 0 ? 3 : NUM_NODES;
@@ -30,6 +28,17 @@ export default function cppnSketch(p) {
       outputWeightsG[i] = p.random(-3, 3);
       outputWeightsB[i] = p.random(-3, 3);
     }
+  }
+
+  p.setup = () => {
+    p.createCanvas(100, 100);
+    p.pixelDensity(1);
+
+    initializeNetwork();
+
+    setInterval(() => {
+      initializeNetwork();
+    }, RESET_TIMER);
 
     p.background(0);
   };

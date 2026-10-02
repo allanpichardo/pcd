@@ -13,13 +13,19 @@ export default {
         },
         {
             id: 'subtitle',
-            gridArea: '3 / 1 / 7 / 6',
-            className: '',
+            gridArea: '3 / 1 / 4 / 8',
+            className: 'boxed',
             component: (
-                <p>
-                    A <strong>C</strong>ompositional <strong>P</strong>attern-<strong>P</strong>roducing <strong>N</strong>etwork
-                    is an artificial neural network that maps coordinates (x,y,z) into pixel colors or geometric patterns.
-                </p>
+                <div>
+                    <p>
+                        A <strong>C</strong>ompositional <strong>P</strong>attern-<strong>P</strong>roducing <strong>N</strong>etwork
+                        is an artificial neural network that maps coordinates (x,y,z) into pixel colors or geometric patterns.
+                    </p>
+                    <br/>
+                    <p>What makes a CPPN different than a typical neural network is that the network weights
+                        use a mix of activation functions <strong>(sin, cos, tanh, gaussian, sigmoid)</strong> across its
+                    layers.</p>
+                </div>
             ),
         },
     ],
