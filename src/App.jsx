@@ -7,11 +7,13 @@ import slide4 from './slides/slide-4.jsx';
 import slide5 from "./slides/slide-5.jsx";
 import slide6 from "./slides/slide-6.jsx";
 import slide7 from './slides/slide-7.jsx';
+import slide4a from "./slides/slide-4a.jsx";
 
 const slides = [
     title,
     slide2,
     slide3,
+    slide4a,
     slide4,
     slide5,
     slide6,
