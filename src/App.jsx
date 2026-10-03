@@ -8,16 +8,20 @@ import slide5 from "./slides/slide-5.jsx";
 import slide6 from "./slides/slide-6.jsx";
 import slide7 from './slides/slide-7.jsx';
 import slide4a from "./slides/slide-4a.jsx";
+import slide8 from "./slides/slide-8.jsx";
+import slide9 from "./slides/slide-9.jsx";
 
 const slides = [
     title,
     slide2,
     slide3,
+    slide5,
     slide4a,
     slide4,
-    slide5,
     slide6,
-    slide7
+    slide7,
+    slide8,
+    slide9
 ];
 
 export default function App() {
@@ -53,6 +57,7 @@ export default function App() {
   return (
     <main className="presentation" aria-live="polite" aria-atomic="true">
       <Slide key={slide.id} {...slide} />
+        <p className="slide__count">{slideIndex}</p>
     </main>
   );
 }

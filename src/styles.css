@@ -61,6 +61,12 @@ body,
   padding: 1rem 2rem;
 }
 
+.slide__count {
+  position: relative;
+  left: 2rem;
+  bottom: 2rem;
+}
+
 .slide__item {
   min-width: 0;
   min-height: 0;

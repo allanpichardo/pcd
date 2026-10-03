@@ -1,23 +1,23 @@
-import cppnSketch from "../sketches/cppn.js";
-import cppnStudies from "../images/cppn-studies-1.jpg";
+import ffaf from '../images/ffaf.mp4';
 
 export default {
-    id: 'slide-5',
-    label: 'CPPN Studies',
+    id: 'slide-8',
+    label: 'Machine Gaze',
     // sketch: cppnSketch,
     items: [
         {
             id: 'title',
             gridArea: '1 / 1 / 2 / 12',
             className: '',
-            component: <h1>∞ res</h1>,
+            style: {zIndex: 2},
+            component: <h1>🌹 shader</h1>,
         },
         {
-            id: 'sketch',
+            id: 'collages',
             gridArea: '1 / 1 / 7 / 13',
             className: 'lightbox',
             component: (
-                <img src={cppnStudies} />
+                <video src={ffaf} autoPlay={true} loop={true} muted={true} />
             ),
         },
     ],
